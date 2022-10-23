@@ -17,7 +17,7 @@ def menu():
 def main():
     print('Montly Sales Program\n')
     menu()
-    command = input('Command').lower()
+    command = input('\nCommand: ').lower()
     while command != 'exit':
         if command == 'view':
             view()
