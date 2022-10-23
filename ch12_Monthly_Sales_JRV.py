@@ -17,3 +17,5 @@ def menu():
 def main():
     print('Montly Sales Program\n')
     menu()
+    
+main()
