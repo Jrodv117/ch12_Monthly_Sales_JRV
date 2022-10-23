@@ -6,8 +6,10 @@ with open(FILE_NAME) as f:
         (key,val) = line.split()
         monthly_sales_dictionary[(key)] = int(val)
         
-with open(FILE_NAME,'w', encoding='utf-8') as f:
-    f.write(monthly_sales_dictionary)
+def write_to_text(dictionary):        
+    with open(FILE_NAME,'w', encoding='utf-8') as f:
+        for key, value in dictionary.items():
+            f.write((key,value))
 
 def menu():
     print('Command Menu')
@@ -24,6 +26,7 @@ def edit(dictionary):
         month = input('\nThree letter month: ')
         amount = int(input('Sales amount: '))
         dictionary[month] = amount
+        write_to_txt(dictionary)
         
 def main():
     print('Montly Sales Program\n')
