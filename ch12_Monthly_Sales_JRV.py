@@ -6,7 +6,7 @@ with open(FILE_NAME) as f:
         (key,val) = line.split()
         monthly_sales_dictionary[(key)] = int(val)
         
-def write_to_text(dictionary):        
+def write_to_txt(dictionary):        
     with open(FILE_NAME,'w', encoding='utf-8') as f:
         for key, value in dictionary.items():
             f.write((key,value))
