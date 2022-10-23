@@ -35,6 +35,6 @@ def main():
     while command != 'exit':
         if command == 'view':
             view(monthly_sales_dictionary)
-        elif command == edit:
+        elif command == 'edit':
             edit(monthly_sales_dictionary)
 main()
