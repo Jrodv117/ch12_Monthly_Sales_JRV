@@ -8,3 +8,7 @@ with open(FILE_NAME) as f:
         
         
 print(monthly_sales_dictionary)
+
+def main():
+    print('Montly Sales Program\n')
+    menu()
