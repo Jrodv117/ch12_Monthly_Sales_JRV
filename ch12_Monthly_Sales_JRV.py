@@ -69,7 +69,7 @@ def check_entry(dictionary, month):
 
 
 def main():
-    print('Montly Sales Program\n')
+    print('Monthly Sales Program\n')
     read_text()
     menus()
     while True:
