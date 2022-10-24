@@ -8,5 +8,5 @@ Aug	2547
 Jun	1324
 Feb	2176
 Nov	984
-Jan	69
+Jan	616
 Sep	1444

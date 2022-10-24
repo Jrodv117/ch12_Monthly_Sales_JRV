@@ -1,5 +1,5 @@
-
 monthly_sales_dictionary = {}
+
 FILE_NAME = 'monthly_sales.txt'
 with open(FILE_NAME) as f:
     for line in f:
@@ -29,14 +29,26 @@ def edit(dictionary):
         amount = int(input('Sales amount: '))
         dictionary[month] = amount
         write_to_txt(dictionary)
+
+def totals(dictionary):
+    sum_of_values = sum(dictionary.values())
+    print(f'Yearly total: {sum_of_values}')
+    print(f'Monthly average: {sum_of_values/len(dictionary)}')
         
 def main():
     print('Montly Sales Program\n')
     menu()
-    command = input('\nCommand: ').lower()
-    while command != 'exit':
+    while True:
+        command = input('\nCommand: ').lower
         if command == 'view':
             view(monthly_sales_dictionary)
         elif command == 'edit':
             edit(monthly_sales_dictionary)
-main()
+        elif command == 'totals':
+            totals(monthly_sales_dictionary)
+        elif command == "exit":
+            print("Bye!")
+            exit()
+
+if __name__ == "__main__":
+    main()
