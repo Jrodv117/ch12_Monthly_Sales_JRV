@@ -8,8 +8,10 @@ with open(FILE_NAME) as f:
         
 def write_to_txt(dictionary):        
     with open(FILE_NAME,'w', encoding='utf-8') as f:
-        for key, value in dictionary.items():
-            f.write((key,value))
+        for key in dictionary.keys():
+            f.write(key.capitalize() + "\t" + str(dictionary[key])+ "\n") 
+        f.close() 
+
 
 def menu():
     print('Command Menu')
